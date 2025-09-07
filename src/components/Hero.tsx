@@ -22,7 +22,7 @@ const Hero = () => {
             <span className="text-primary">Phạm Đạt</span>
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-             Hiện đang là sinh viên của trường Đại học Bách khoa - ĐHQG HCM
+            Hiện đang là sinh viên của trường Đại học Bách khoa - ĐHQG HCM
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <Button
@@ -42,6 +42,7 @@ const Hero = () => {
             </Button>
           </div>
         </div>
+
         <div
           className="absolute bottom left-1/2 transform -translate-x-1/2 cursor-pointer animate-bounce"
           onClick={() => scrollToSection("about")}
