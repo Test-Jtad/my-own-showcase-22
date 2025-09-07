@@ -43,7 +43,7 @@ const Hero = () => {
           </div>
         </div>
         <div 
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 cursor-pointer animate-bounce"
+          className="absolute bottom-4 left-1/2 transform -translate-x-1/2 cursor-pointer animate-bounce"
           onClick={() => scrollToSection('about')}
         >
           <ArrowDown className="w-6 h-6 text-primary" />
