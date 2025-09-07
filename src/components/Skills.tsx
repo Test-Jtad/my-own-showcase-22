@@ -4,14 +4,14 @@ import { Badge } from "@/components/ui/badge";
 
 const Skills = () => {
   const technicalSkills = [
-    { name: "React/Next.js", level: 90 },
-    { name: "TypeScript", level: 85 },
-    { name: "JavaScript", level: 95 },
-    { name: "HTML/CSS", level: 95 },
-    { name: "Tailwind CSS", level: 90 },
+    { name: "React/Next.js", level: 75 },
+    { name: "TypeScript", level: 50 },
+    { name: "JavaScript", level: 80 },
+    { name: "HTML/CSS", level: 50 },
+    { name: "C++", level: 80 },
     { name: "Node.js", level: 75 },
     { name: "Python", level: 70 },
-    { name: "Git/GitHub", level: 85 },
+    { name: "Git/GitHub", level: 70 },
   ];
 
   const softSkills = [
@@ -23,16 +23,7 @@ const Skills = () => {
     "Thích ứng nhanh",
   ];
 
-  const tools = [
-    "VS Code",
-    "Figma",
-    "Adobe Creative Suite",
-    "Postman",
-    "Docker",
-    "AWS",
-    "Firebase",
-    "MongoDB",
-  ];
+  const tools = ["VS Code", "Docker", "Firebase"];
 
   return (
     <section id="skills" className="py-20 px-6 bg-muted/30">
@@ -42,7 +33,8 @@ const Skills = () => {
             Kỹ Năng
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Những công nghệ và kỹ năng tôi sử dụng để tạo ra những sản phẩm tuyệt vời
+            Những công nghệ và kỹ năng tôi sử dụng để tạo ra những sản phẩm
+            tuyệt vời
           </p>
         </div>
 
@@ -57,8 +49,12 @@ const Skills = () => {
                 {technicalSkills.map((skill, index) => (
                   <div key={index} className="space-y-2">
                     <div className="flex justify-between text-sm">
-                      <span className="font-medium text-foreground">{skill.name}</span>
-                      <span className="text-muted-foreground">{skill.level}%</span>
+                      <span className="font-medium text-foreground">
+                        {skill.name}
+                      </span>
+                      <span className="text-muted-foreground">
+                        {skill.level}%
+                      </span>
                     </div>
                     <Progress value={skill.level} className="h-2" />
                   </div>
@@ -92,7 +88,11 @@ const Skills = () => {
               </h3>
               <div className="flex flex-wrap gap-2">
                 {tools.map((tool, index) => (
-                  <Badge key={index} variant="outline" className="border-primary text-primary">
+                  <Badge
+                    key={index}
+                    variant="outline"
+                    className="border-primary text-primary"
+                  >
                     {tool}
                   </Badge>
                 ))}

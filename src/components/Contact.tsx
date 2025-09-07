@@ -9,67 +9,70 @@ import { useToast } from "@/hooks/use-toast";
 const Contact = () => {
   const { toast } = useToast();
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
+    name: "",
+    email: "",
+    message: "",
   });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     toast({
       title: "Cảm ơn bạn!",
-      description: "Tin nhắn của bạn đã được gửi. Tôi sẽ phản hồi sớm nhất có thể.",
+      description:
+        "Tin nhắn của bạn đã được gửi. Tôi sẽ phản hồi sớm nhất có thể.",
     });
-    setFormData({ name: '', email: '', message: '' });
+    setFormData({ name: "", email: "", message: "" });
   };
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
   const contactInfo = [
     {
-      icon: <Mail className="w-6 h-6" />,
+      icon: <Mail className="w-5 h-6" />,
       title: "Email",
-      value: "yourname@email.com",
-      link: "mailto:yourname@email.com"
+      value: "dat.phamtan@hcmut.edu.com",
+      link: "mailto:dat.phamtan@hcmut.edu.com",
     },
     {
-      icon: <Phone className="w-6 h-6" />,
+      icon: <Phone className="w-5 h-6" />,
       title: "Điện thoại",
-      value: "+84 xxx xxx xxx",
-      link: "tel:+84xxxxxxxxx"
+      value: "+84 363539478",
+      link: "tel:+84363539478",
     },
     {
-      icon: <MapPin className="w-6 h-6" />,
+      icon: <MapPin className="w-5 h-6" />,
       title: "Địa chỉ",
       value: "Hồ Chí Minh, Việt Nam",
-      link: "#"
-    }
+      link: "#",
+    },
   ];
 
   const socialLinks = [
     {
       icon: <Github className="w-6 h-6" />,
       name: "GitHub",
-      url: "https://github.com/yourusername",
-      color: "hover:text-gray-800"
+      url: "https://github.com/dat-phamtan",
+      color: "hover:text-gray-800",
     },
     {
       icon: <Linkedin className="w-6 h-6" />,
       name: "LinkedIn",
-      url: "https://linkedin.com/in/yourusername",
-      color: "hover:text-blue-600"
+      url: "https://www.linkedin.com/in/%C4%91%E1%BA%A1t-ph%E1%BA%A1m-t%E1%BA%A5n-baaa06366/",
+      color: "hover:text-blue-600",
     },
     {
       icon: <Facebook className="w-6 h-6" />,
       name: "Facebook",
-      url: "https://facebook.com/yourusername",
-      color: "hover:text-blue-500"
-    }
+      url: "https://www.facebook.com/pham.at.991670/",
+      color: "hover:text-blue-500",
+    },
   ];
 
   return (
@@ -80,7 +83,8 @@ const Contact = () => {
             Liên Hệ
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Hãy kết nối với tôi để thảo luận về cơ hội hợp tác hoặc chỉ đơn giản là trò chuyện về công nghệ
+            Hãy kết nối với tôi để thảo luận về cơ hội hợp tác hoặc chỉ đơn giản
+            là trò chuyện về công nghệ
           </p>
         </div>
 
@@ -103,7 +107,9 @@ const Contact = () => {
                         {info.icon}
                       </div>
                       <div>
-                        <h4 className="font-semibold text-foreground">{info.title}</h4>
+                        <h4 className="font-semibold text-foreground">
+                          {info.title}
+                        </h4>
                         <p className="text-muted-foreground">{info.value}</p>
                       </div>
                     </a>
@@ -143,7 +149,10 @@ const Contact = () => {
               </h3>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
+                  <label
+                    htmlFor="name"
+                    className="block text-sm font-medium text-foreground mb-2"
+                  >
                     Họ và Tên
                   </label>
                   <Input
@@ -157,7 +166,10 @@ const Contact = () => {
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
+                  <label
+                    htmlFor="email"
+                    className="block text-sm font-medium text-foreground mb-2"
+                  >
                     Email
                   </label>
                   <Input
@@ -172,7 +184,10 @@ const Contact = () => {
                   />
                 </div>
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
+                  <label
+                    htmlFor="message"
+                    className="block text-sm font-medium text-foreground mb-2"
+                  >
                     Tin Nhắn
                   </label>
                   <Textarea
@@ -186,8 +201,8 @@ const Contact = () => {
                     placeholder="Nhập tin nhắn của bạn..."
                   />
                 </div>
-                <Button 
-                  type="submit" 
+                <Button
+                  type="submit"
                   className="w-full bg-gradient-primary hover:shadow-glow transition-all duration-300"
                   size="lg"
                 >
